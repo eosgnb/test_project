@@ -16,11 +16,11 @@ int main(void)
     int check_num = is_even(num);
     if (check_num == 1)
     {
-        printf("%d is even.\n");
+        printf("%d is even.\n", num);
     }
     else
     {
-        printf("%d is odd.\n");
+        printf("%d is odd.\n", num);
     }
 }
 
