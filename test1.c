@@ -2,7 +2,7 @@
 
 int get_square(int num)
 {
-    return num * num;
+    return num * num * num;
 }
 
 int main(void)
