@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-// Function prototypes
-int get_minimum(int, int []);
-int get_maximum(int, int []);
+void display_minmax(int, int []);
 
 int main(void)
 {
@@ -21,17 +19,14 @@ int main(void)
         scanf("%d", &arr[i]);
     }
 
-    int max = get_maximum(n, arr);
-    printf("Maximum element: %d\n", max);
-
-    int min = get_minimum(n, arr);
-    printf("Minimum element: %d\n", min);
+    display_minmax(n, arr);
 
     return 0;
 }
 
-int get_maximum(int n, int arr[])
+void display_minmax(int n, int arr[])
 {
+    int min = arr[0];
     int max = arr[0];
 
     for (int i = 0; i < n; i++)
@@ -40,22 +35,12 @@ int get_maximum(int n, int arr[])
         {
             max = arr[i];
         }
-    }
-    
-    return max;
-}
 
-int get_minimum(int n, int arr[])
-{
-    int min = arr[0];
-
-    for (int i = 0; i < n; i++)
-    {
         if (arr[i] < min)
         {
             min = arr[i];
         }
     }
-    
-    return min;
+
+    printf("Min: %d\nMax: %d\n", min, max);
 }
